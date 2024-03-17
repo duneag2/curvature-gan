@@ -66,10 +66,6 @@ class DatasetFolder(data.Dataset):
         rootA=root
 
         samples = make_dataset(rootA, extensions)
-
-        #trainB때문에 진행하기 
-        #rootB = '/mnt/datanas/neuro/cycleGANMIP/trainB/'
-        rootB = '/mnt/data/_neurodata/_new_data/trainB/'
         samplesB = make_datasetB(rootB, extensions)
         
         if len(samples) == 0:
@@ -108,7 +104,7 @@ class DatasetFolder(data.Dataset):
         for i in range(0,len(self.samplesB)):
             im, n = self.samplesB[i]
             fib = im.split("/")[-1].split("_")
-            if (fia[0] == fib[0]) & (fia[-1] == fib[-1]): #cyw 이것이 앞의 번호와 뒷번호 일치할 경우 이미지 번호부여해서 같이 돌리도록 만듦 # trainA: 3030303_petra_0.png /// rainB: 3030303_TOF_0.png
+            if (fia[0] == fib[0]) & (fia[-1] == fib[-1]): 
                 pathb, targetb = self.samplesB[i]
                 pathbarr.append(pathb)
         try:
