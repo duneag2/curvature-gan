@@ -11,14 +11,14 @@ import matplotlib.pyplot as plt
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 from scipy import ndimage
 
-class UGATIT(object) :
+class CurvDGAN(object) :
     def __init__(self, args):
         self.light = args.light
 
         if self.light :
-            self.model_name = 'UGATIT_light'
+            self.model_name = 'CurvDGAN_light'
         else :
-            self.model_name = 'UGATIT'
+            self.model_name = 'CurvDGAN'
 
         self.result_dir = args.result_dir
         self.dataset = args.dataset
