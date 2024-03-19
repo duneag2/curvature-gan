@@ -86,7 +86,7 @@ def main():
       exit()
 
     # open session
-    gan = UGATIT(args)
+    gan = CurvDGAN(args)
 
     # build graph
     gan.build_model()
