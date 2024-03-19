@@ -1,4 +1,4 @@
-from UGATIT import UGATIT
+from CurvDGAN import CurvDGAN
 import argparse
 from utils import *
 import os
